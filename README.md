@@ -63,3 +63,18 @@ Implement at least one additional feature. Examples include, but you are not lim
 Build a user-friendly interface to tie everything together.
 - **Features**: Enter actor names, view paths, handle "break" cases (misspellings/no path), and interact with extra features.
 > **<span style="color:green">You may use AI to help you with this portion of the project.</span>**
+
+## 구현 현황 (Implementation Status)
+
+이 저장소는 위 과제 명세 중 일부만 구현되어 있다.
+
+- ✅ **그래프 라이브러리** (`src/main/Graph.java`): 제네릭 `Graph<E, T>`. 인접 리스트(HashMap 기반 정점, ArrayList 기반 간선) 구조.
+  - `addVertex`, `connect`
+  - `BFS(start, target)` — predecessor map(`backtrace`) 기반 최단경로 복원
+  - `furthest(start)` — 가장 먼 정점까지의 경로
+  - `mostEdgesBetween(start)`
+  - `averageConnectivity(start)`
+- ⬜ **데이터 임포트 / KevinBacon 앱** (`src/main/KevinBacon.java`): 현재 전부 주석 처리된 스켈레톤. `actors`/`movie-actors`/`movies` 파일 로딩, Bacon Number 출력, 필터 BFS, GUI 등 미구현.
+- ⬜ **GUI**: 미구현.
+
+데이터 파일은 `files/`(전체: `files/full/`, 소형: `files/mini/`)에 포함되어 있다.
